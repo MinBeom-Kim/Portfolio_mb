@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 
+<style>
+    a.top {
+        position: fixed;
+        left: 80%;
+        bottom: 50px;
+        display: none;
+    }
+</style>
+
 <html>
 <head>
     <title>PORTFOLIO</title>
@@ -39,7 +48,7 @@
                         </div>
                     </div>
                     <div>
-                        <div style="border-left: 1px solid #f7a67b; border-right: 1px solid #f7a67b;">
+                        <div style="border-left: 1px solid #C0E1D1; border-right: 1px solid #C0E1D1;">
                             
                             <hr />
                             <div style="padding-left: 3%; text-align: left;">&nbsp;</div>
@@ -489,6 +498,8 @@
                     </div>
     
                 </article>
+
+                <a href="#" class="top" style="font-size: 1.618em;">Top</a>
     
                 <!-- Pagination -->
                 <div class="pagination">
@@ -645,6 +656,20 @@
         <script src="../js/breakpoints.min.js"></script>
         <script src="../js/util.js"></script>
         <script src="../js/main.js"></script>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script>
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+            $('.top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        </script>
     
     </body>
 </html>
