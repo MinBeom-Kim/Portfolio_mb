@@ -92,7 +92,9 @@ body {
 /* Type */
 body, input, select, textarea {
   color: #7f888f;
-  font-family: "Open Sans", sans-serif;
+  /*font-family: "Open Sans", sans-serif;*/
+  font-family: 'maple', sans-serif;
+	src: url(../webfonts/Maplestory_Bold.ttf) format('truetype');
   font-size: 13pt;
   font-weight: 400;
   line-height: 1.65; }
@@ -112,11 +114,11 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #f56a6a;
+  color: #96CCA8;
   text-decoration: none; }
   a:hover {
-    border-bottom-color: #f56a6a;
-    color: #f56a6a !important; }
+    border-bottom-color: #96CCA8;
+    color: #96CCA8 !important; }
     a:hover strong {
       color: inherit; }
 
@@ -135,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   line-height: 1.5;
-  margin: 0 0 1em 0; }
+  margin: 0 0 0.4em 0; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none;
@@ -998,7 +1000,7 @@ header p {
   text-transform: uppercase; }
 
 header.major > :last-child {
-  border-bottom: solid 3px #f56a6a;
+  border-bottom: solid 3px #96CCA8;
   display: inline-block;
   margin: 0 0 2em 0;
   padding: 0 0.75em 0.5em 0; }
@@ -1495,8 +1497,8 @@ button,
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #f56a6a;
-  color: #f56a6a !important;
+  box-shadow: inset 0 0 0 2px #96CCA8;
+  color: #447B66 !important;
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto Slab", serif;
