@@ -18,11 +18,35 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
-							
-
+				
 							<!-- Section -->
 								<section>
+									<header class="major">
+										<h2>Skills</h2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content" >
+												<canvas id="skills"></canvas>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<canvas id="skills2"></canvas>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<canvas id="skills3"></canvas>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<canvas id="skills4"></canvas>
+											</div>
+										</article>
+										<br>
+									</div>
 									<header class="major">
 										<h2>Experience</h2>
 									</header>
@@ -354,7 +378,78 @@
 
 						</div>
 					</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script>
+			var ctx = document.getElementById("skills").getContext('2d');
+			var ctx2 = document.getElementById("skills2").getContext('2d');
+			var ctx3 = document.getElementById("skills3").getContext('2d');
+			var ctx4 = document.getElementById("skills4").getContext('2d');
+			
+			var skillsData = {
+				labels: ["label-1", "label-2", "label-3", "label-4", "label-5"],
+				datasets: [{
+					data: [7, 10, 6, 2, 4],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+					],
+					borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+					],
+				}]
+			};
 
+			var options = {
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							}
+						}],
+						xAxes: [{
+							ticks: {
+								beginAtZero: true,
+								display: false
+							},
+							gridLines: {
+								display: false,
+								drawBorder: false
+							}
+						}],
+					},
+					legend: {
+						display: false
+					}
+			};
+
+			var myChart = new Chart(ctx, {
+				type: 'horizontalBar',
+				data: skillsData,
+				options: options,
+			});
+			var myChart2 = new Chart(ctx2, {
+					type: 'horizontalBar',
+					data: skillsData,
+					options: options,
+				});
+			var myChart3 = new Chart(ctx3, {
+					type: 'horizontalBar',
+					data: skillsData,
+					options: options,
+				});
+			var myChart4 = new Chart(ctx4, {
+					type: 'horizontalBar',
+					data: skillsData,
+					options: options,
+				});
+		</script>
 		
 	</body>
 </html>
