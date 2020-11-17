@@ -138,7 +138,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #c94663;
+		color: #447B66;
 	}
 
 	strong, b {
@@ -1720,7 +1720,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			box-shadow: 0px 0px 2px 2px #c94663;
+			box-shadow: 0px 0px 2px 2px #447B66;
 		}
 
 	form ::-webkit-input-placeholder {
@@ -1808,7 +1808,7 @@ input, select, textarea {
 	button,
 	.button {
 		cursor: pointer;
-		background-color: #c94663;
+		background-color: #447B66;
 		border-radius: 0.4em;
 		text-align: center;
 		box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15);
@@ -1849,7 +1849,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #b93653;
+			background-color: #447B66;
 		}
 
 		input[type="button"].alt,
@@ -1933,7 +1933,7 @@ input, select, textarea {
 			}
 
 			.pagination .pages a.active {
-				background-color: #364050;
+				background-color: #E0EcE6;
 				color: #fff;
 				box-shadow: none;
 				text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
@@ -1943,7 +1943,7 @@ input, select, textarea {
 
 	.box.calendar .inner {
 		position: relative;
-		background-color: #ECF3FA;
+		background-color: #e0ecdf;
 		border-radius: 0.4em;
 		padding: 0.75em 0.5em 0.75em 0.5em;
 	}
@@ -2198,14 +2198,14 @@ input, select, textarea {
 		}
 
 		#nav li.current a {
-			background-color: #eff6fc !important;
+			background-color: #e0ecdf !important;
 			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 			font-weight: 700;
 			color: #4C5B5D;
 		}
 
 		#nav li:hover a {
-			color: #e2efff;
+			color: #e6e8da;
 		}
 
 /* Sidebar */
@@ -2226,7 +2226,7 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 10001;
-		background: #364050;
+		background: #E0ECE6;
 	}
 
 		#titleBar .title {
@@ -2279,7 +2279,7 @@ input, select, textarea {
 				width: 50px;
 				height: 30px;
 				line-height: 30px;
-				background: #c94663;
+				background: #C0E1D1;
 				border-radius: 5px;
 				color: #fff;
 				text-align: center;
@@ -2289,14 +2289,14 @@ input, select, textarea {
 			}
 
 			#titleBar .toggle:active:before {
-				background-color: #d95673;
+				background-color: #447B66;
 			}
 
 	#sidebar {
 		color: rgba(255, 255, 255, 0.55);
 		width: 14em;
 		padding: 3em 1.35em 1em 1.15em;
-		background: #F2F7FC;
+		background: #E0ECE6;
 		overflow-y: auto;
 		left: 0;
 		-moz-order: -1;
