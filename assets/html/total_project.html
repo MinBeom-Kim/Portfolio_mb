@@ -1,9 +1,14 @@
-<!DOCTYPE HTML>
-<!--
-	Striped by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
+
+<style>
+    a.top {
+        position: fixed;
+        left: 80%;
+        bottom: 50px;
+        display: none;
+    }
+</style>
+
 <html>
 
 <head>
@@ -13,6 +18,7 @@
     <link rel="stylesheet" href="../css/main.css" />
 </head>
 
+
 <body class="is-preload">
 
     <!-- Content -->
@@ -21,21 +27,26 @@
 
             <!-- Post -->
             <article class="box post post-excerpt">
-                <header>
-                    <h2><a href="#">Other</a></h2>
-                </header>
-                </div>
-                <a class="navbar-beader" style="text-decoration:none; margin: 0 1em;"
-                    href="https://studyrailss.herokuapp.com/" target="_self">rails_study</a>
-                <a class="navbar-beader" style="text-decoration:none; margin: 0 1em;"
-                    href="https://minbeom-kim.github.io/JS_APP_Basic_TODO/JS_Basic_ToDo%20App/" target="_self">To-Do list_clone App</a>
-                <a class="navbar-beader" style="text-decoration:none; margin: 0 1em;"
-                    href="https://minbeom-kim.github.io/Guide-service-for-blind/index.html" target="_self">Guide-service-for-blind</a>
-                <br>
-                <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+
+                <iframe src="./project.html" style="width:100%; height: 410em"></iframe>
 
             </article>
 
+            <a href="#" class="top" style="font-size: 1.618em;">Top</a>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <!--<a href="#" class="button previous">Previous Page</a>-->
+                <div class="pages">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <span>&hellip;</span>
+                    <a href="#">20</a>
+                </div>
+                <a href="#" class="button next">Next Page</a>
+            </div>
 
         </div>
     </div>
@@ -50,11 +61,11 @@
         <nav id="nav">
             <ul>
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="./total_project.html">project & Paper</a></li>
+                <li class="current"><a href="#">project & Paper</a></li>
                 <li><a href="./story_2.html">Personal_Brranding</a></li>
                 <li><a href="http://cosm.iptime.org:8000" target="_blank">[창업동아리] IM FIT</a></li>
                 <li><a href="https://rapport0919.github.io/about/">Study_Rapport</a></li>
-                <li class="current"><a href="#">Other</a></li>
+                <li><a href="./other.html">Other</a></li>
             </ul>
         </nav>
 
@@ -144,6 +155,20 @@
     <script src="../js/breakpoints.min.js"></script>
     <script src="../js/util.js"></script>
     <script src="../js/main.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });
+        $('.top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    </script>
 
 </body>
 
