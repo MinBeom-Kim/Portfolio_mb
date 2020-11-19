@@ -30,7 +30,7 @@
             <article class="box post post-excerpt">
                 
 
-                <iframe src="./project/project.html" style="width:100%; height: 410em"></iframe>
+                <iframe class ='project' src="./project/project_1.html" style="width:100%; height: 280em"></iframe>
                 <a href="#" class="top" style="font-size: 1.618em;">Top</a>
 
             </article>
@@ -41,14 +41,13 @@
             <div class="pagination">
                 <!--<a href="#" class="button previous">Previous Page</a>-->
                 <div class="pages">
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
+                    <a href="" class="active one">1</a>
+                    
+                    <a href="" class="two">2</a>
                     <span>&hellip;</span>
-                    <a href="#">20</a>
+                    <a href="">..</a>
                 </div>
-                <a href="#" class="button next">Next Page</a>
+                <a href="" class="button next">Next Page</a>
             </div>
 
         </div>
@@ -153,7 +152,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../js/jquery.min.js"></script>
+    <script??? src="../js/jquery.min.js"></script???>
     <script src="../js/browser.min.js"></script>
     <script src="../js/breakpoints.min.js"></script>
     <script src="../js/util.js"></script>
@@ -172,6 +171,32 @@
         });
 
         
+    </script>
+    <script>
+        $('.one').click(function () {
+            $(this).addClass('active');
+            $('.two').removeClass("active");
+            $('.project').attr({ "src": "./project/project_1.html" });
+            $('.project').css("height", "280em");
+            $('html, body').animate({ scrollTop: 0 }, 700);
+            return false;
+        });
+        $('.two').click(function () {
+            $(this).addClass('active');
+            $('.one').removeClass("active");
+            $('.project').attr({"src": "./project/project_2.html"});
+            $('.project').css("height", "130em");
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+        $('.next').click(function () {
+            $('.two').addClass('active');
+            $('.one').removeClass("active");
+            $('.project').attr({ "src": "./project/project_2.html" });
+            $('.project').css("height", "130em");
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
     </script>
     
 
