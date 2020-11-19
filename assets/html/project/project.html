@@ -551,6 +551,7 @@
 
             for(index = 1; index <13; index++) {
                 $('#' + index).click(function () {
+                    
                     id_check = $(this).attr('id');
                     var modal = document.getElementById("Modal_" + id_check);
                     console.log(modal)
@@ -570,8 +571,10 @@
                             modal.style.display = "none";
                         }
                     }
-
+                    $('#main').animate({ scrollTop: 0 }, 600);
                 });
+       
+
             }
 
                 
