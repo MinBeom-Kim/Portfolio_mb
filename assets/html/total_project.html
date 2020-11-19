@@ -31,6 +31,7 @@
                 
 
                 <iframe src="./project/project.html" style="width:100%; height: 410em"></iframe>
+                <a href="#" class="top" style="font-size: 1.618em;">Top</a>
 
             </article>
 
@@ -157,6 +158,19 @@
     <script src="../js/breakpoints.min.js"></script>
     <script src="../js/util.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });
+        $('.top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    </script>
     
 
 </body>
