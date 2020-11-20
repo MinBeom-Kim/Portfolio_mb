@@ -4,11 +4,66 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<style>
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		/* Stay in place */
+		z-index: 1;
+		/* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%;
+		/* Full width */
+		height: 100%;
+		/* Full height */
+		overflow: auto;
+		/* Enable scroll if needed */
+		background-color: rgb(0, 0, 0);
+		/* Fallback color */
+		background-color: rgba(0, 0, 0, 0.4);
+		/* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 15% auto;
+		/* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+		/* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button */
+	.close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+</style>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../css/main2.css" />
+		<script src="../js/jquery.js"></script>
+		<script src="../js/pdfobject.js"></script>
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
 	</head>
 	<body class="is-preload" style="background-color: #FDFDFD;">
 
@@ -22,7 +77,7 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Skills</h2>
+										<h2>Skills & Interest</h2>
 									</header>
 									<div class="features">
 										<article>
@@ -36,13 +91,13 @@
 											</div>
 										</article>
 										<article>
-											<div class="content">
-												<canvas id="skills3"></canvas>
+											<div id="skills3" class="content">
+												
 											</div>
 										</article>
 										<article>
 											<div class="content">
-												<canvas id="skills4"></canvas>
+												
 											</div>
 										</article>
 										<br>
@@ -145,71 +200,224 @@
 
 									
 										<article>
-											<a href="#" class="image"><img src="../../images/MVISION.png" alt="" /></a>
+											<a href="#" id = "1" class="image"><img src="../../images/MVISION.png" alt="" /></a>
 											<h3>시각장애인을 위한 길 안내 서비스 : 전공캡스톤디자인</h3>
 											<p>2020.04.03. ~ 2020.08.31.</p>
 											<p></p>
+											<ul class="actions">
+												
+												<!-- The Modal -->
+												<div id="Modal_1" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_1">&times;</span>
+														<div class="project_1" style="width:100%;height:45em;">
+											
+															<iframe
+																src="https://docs.google.com/presentation/d/e/2PACX-1vRBlY6Z6R0SE9b2hhfy9Avu9D1NB-_5Ltx4uIqEFzAvbMx_7Ltgx2NztxDACaY40SPKzqSS8kqD2ymo/embed?start=false&loop=false&delayms=3000"
+																frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true"
+																webkitallowfullscreen="true"></iframe>
+														</div>
+											
+											
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../../images/한이음.png" alt="" /></a>
+											<a href="#" id="2" class="image"><img src="../../images/푸르미르.png" alt="" /></a>
+											<h3>[동아리] 취업동아리_푸르미르</h3>
+											<p>2019.03. ~ 2020.02.</p>
+											
+											<ul class="actions">
+												
+												<!-- The Modal -->
+												<div id="Modal_2" class="modal">
+										
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_2">&times;</span>
+														<div class="project_2" style="width:100%;height:90em;">
+															<iframe
+																src="https://docs.google.com/presentation/d/e/2PACX-1vTZq-w94YvJ5VsAdxMNzSkqGdGnUj21d3SJwW_a--su6KClXpMSRHyWOpGoIsx53U-_7N1S4-hA9mEa/embed?start=false&loop=false&delayms=3000"
+																frameborder="0" width=100% height="569" allowfullscreen="true" mozallowfullscreen="true"
+																webkitallowfullscreen="true"></iframe>
+														</div>
+										
+										
+													</div>
+										
+												</div>
+											</ul>
+										</article>
+										<article>
+											<a href="#" id="3" class="image"><img src="../../images/한이음.png" alt="" /></a>
 											<h3>공동 세탁장 사용 여부 안내 및 알림 시스템 : 2020 한이음ICT멘토링 프로젝트</h3>
 											<p>2020.05.13. ~ 2020.11.30.</p>
 											<p></p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_3" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_3">&times;</span>
+														<div class="project_3" style="width:100%;"></div>
+														<iframe width="100%" height="418" src="https://www.youtube.com/embed/G3HiLHX_lQo" frameborder="0"
+															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+															allowfullscreen></iframe>
+														<div class="project_3" style="width:100%; height: 100em;"></div>
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
 										<article>
-											<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10402921" class="image" target="_parent"><img src="../../images/hci2020.png" alt="" /></a>
+											<a href="#" id="4" class="image"><img src="../../images/hci2020.png" alt="" /></a>
 											<h3>면접 이미지메이킹 컨설팅 경험 향상을 위한 디자인 제언 : HCI Korea 2020</h3>
 											<p>2019.10.06. ~ 2019.12.10.</p>
 											<p></p>
+											<ul class="actions">
+												<li id=""><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10402921" class="button"  target="_parent">More</a></li>
+												<!-- The Modal -->
+												<div id="Modal_4" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_4">&times;</span>
+														<div class="project_4" style="width:100%;height:45em;"></div>
+														<script>PDFObject.embed("../pdf/HCI_포스터_면접_이미지메이킹_컨설팅_경험_향상을_위한_디자인_제언.pdf", ".project_4");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../../images/공모전_Project.png" alt="" /></a>
+											<a href="#" id="5" class="image"><img src="../../images/공모전_Project.png" alt="" /></a>
 											<h3>인공지능 기반 공모전 추천 시스템 설계 및 구현</h3>
 											<p>2019.11.07. ~ 2019.12.25.</p>
 											<p></p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_5" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_5">&times;</span>
+														<div class="project_5" style="width:100%;height:45em;"></div>
+														<script>PDFObject.embed("../pdf/인공지능_기반_공모전_추천_시스템_설계_기획안.pdf", ".project_5");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../../images/mqtt_project.png" alt="" /></a>
-											<h3>MQTT기반 공용 세탁실 모니터링 시스템</h3>
-											<p>2019.11.10. ~ 2019.12.25.</p>
-											<p></p>
-											
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../../images/융복합.png" alt="" /></a>
+											<a href="#" id="6" class="image"><img src="../../images/융복합.png" alt="" /></a>
 											<h3>보행 교통사고 감소를 위한 시스템 구축 : 융복합캡스톤디자인</h3>
 											<p>2019.06.25. ~ 2019.07.16.</p>
 											<p></p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_6" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_6">&times;</span>
+														<div class="project_6" style="width:100%;height:90em;"></div>
+														<script>PDFObject.embed("../pdf/보행_교통사고_감소를_위한_시스템_구축.pdf", ".project_6");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../../images/rails_project.png" alt="" /></a>
+											<a href="#" id="7" class="image"><img src="../../images/배민UX.png" alt="" /></a>
+											<h3>배달의 민족 UX 분석</h3>
+											<p>2018.09.13. ~ 2018.10.02.</p>
+											<p></p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_7" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_7">&times;</span>
+														<div class="project_7" style="width:100%;height:45em;"></div>
+														<script>PDFObject.embed("../pdf/배달의민족_UX분석.pdf", ".project_7");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
+										
+										</article>
+										<article>
+											<a href="#" id="8" class="image"><img src="../../images/rails_project.png" alt="" /></a>
 											<h3>Ruby on Rails 기반
 											스터디 관리 웹 서비스 설계 및 구현</h3>
 											<p>2019.05.14. ~ 2019.06.11.</p>
 											<p></p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_8" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_8">&times;</span>
+														<div class="project_8" style="width:100%;height:90em;"></div>
+														<script>PDFObject.embed("../pdf/Ruby_on_Rails_기반_스터디_관리_웹_서비스_설계_및_구현_스터디관리2팀.pdf", ".project_8");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
+											
 											
 										</article>
 										<article>
-											<a href="#" class="image"><img src="../../images/midi_project.png" alt="" /></a>
+											<a href="#" id="9" class="image"><img src="../../images/midi_project.png" alt="" /></a>
 											<h3>아두이노 기반 MIDI Controller 개발
 											: 공명 제어 시스템</h3>
 											<p>2018.09.19. ~ 2018.12.26.</p>
 											<p>
 											</p>
+											<ul class="actions">
+												<!-- The Modal -->
+												<div id="Modal_9" class="modal">
+											
+													<!-- Modal content -->
+													<div class="modal-content" style="height:150em;">
+														<span class="close close_9">&times;</span>
+														<h3>* 최종발표자료</h3>
+														<div class="project_9" style="width:100%;height:45em;"></div>
+											
+														<script>PDFObject.embed("../pdf/Arduiono기반_MIDI_Controller.pdf", ".project_9");</script>
+											
+											
+														<h3 style="margin-top: 3em;">* 결과보고서</h3>
+														<div class="project_9_2" style="width:100%;height:90em;"></div>
+														<script>PDFObject.embed("../pdf/[코너스톤디자인]_최종결과보고서_A팀.pdf", ".project_9_2");</script>
+											
+													</div>
+											
+												</div>
+											</ul>
 											
 										</article>
-										<article>
-											<a href="#" class="image"><img src="../../images/배민UX.png" alt="" /></a>
-											<h3>배달의 민족 UX 분석</h3>
-											<p>2018.09.13. ~ 2018.10.02.</p>
-											<p></p>
-											
-										</article>
+										
+
 										
 									</div>
 
@@ -222,23 +430,66 @@
 
 						</div>
 					</div>
+		<script>
+			// Get the modal
+
+			var index = 1;
+			var id_check = 0;
+
+			for (index = 1; index < 14; index++) {
+				$('#' + index).click(function () {
+
+					id_check = $(this).attr('id');
+					var modal = document.getElementById("Modal_" + id_check);
+					console.log(modal)
+					// Get the button that opens the modal
+					modal.style.display = "block";
+
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName("close_" + id_check)[0];
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function () {
+						modal.style.display = "none";
+					}
+
+					$(document).keydown(function (event) {
+						if (event.keyCode == 27 || event.which == 27) {
+
+							modal.style.display = "none";
+
+						}
+					});
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function (event) {
+						if (event.target == modal) {
+							modal.style.display = "none";
+						}
+					}
+
+
+				});
+
+
+			}
+
+
+		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<script>
 			var ctx = document.getElementById("skills").getContext('2d');
 			var ctx2 = document.getElementById("skills2").getContext('2d');
-			var ctx3 = document.getElementById("skills3").getContext('2d');
-			var ctx4 = document.getElementById("skills4").getContext('2d');
 			
 			var skillsData = {
-				labels: ["label-1", "label-2", "label-3", "label-4", "label-5"],
+				labels: ["웹 개발", "앱 개발", "데이터 분석", "서비스 디자인", "아이디어"],
 				datasets: [{
-					data: [7, 10, 6, 2, 4],
+					data: [7, 2, 6, 4, 8.5],
 					backgroundColor: [
-						'#447B66',
+						'#7DB5A0',
+						'#E0ECE6',
 						'#96CCA8',
 						'#C0E1D1',
-						'#E0ECE6',
-						'#C6D589',
+						'#447B66',
 					]
 				}]
 			};
@@ -276,16 +527,42 @@
 					data: skillsData,
 					options: options,
 				});
-			var myChart3 = new Chart(ctx3, {
-					type: 'horizontalBar',
-					data: skillsData,
-					options: options,
-				});
-			var myChart4 = new Chart(ctx4, {
-					type: 'horizontalBar',
-					data: skillsData,
-					options: options,
-				});
+		</script>
+		<script>
+
+			var frequency_list = [{ "text": "기회", "size": 85 }, { "text": "협업", "size": 70 }, { "text": "소통", "size": 55 }, { "text": "리더십", "size": 30 }, { "text": "팔로워십", "size": 25 }, { "text": "창업", "size": 60 }, { "text": "동아리", "size": 70 }, { "text": "공유", "size": 40 } ];
+
+
+			var color = d3.scaleLinear()
+				.domain([100, 20, 15, 10, 6, 5, 4, 3, 2, 1])
+				.range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#A7F2D7", "#9EE6CB", "#8DCCB5", "#7BB39E", "#6A9988", "#618C7C", "#567D6F"]);
+
+			d3.layout.cloud().size([800, 300])
+				.words(frequency_list)
+				.rotate(0)
+				.fontSize(function (d) { return d.size * 1.1; })
+				.on("end", draw)
+				.start();
+
+			function draw(words) {
+				d3.select("#skills3").append("svg")
+					.attr("width", 850)
+					.attr("height", 350)
+					.attr("class", "wordcloud")
+					.append("g")
+					// without the transform, words words would get cutoff to the left and top, they would
+					// appear outside of the SVG area
+					.attr("transform", "translate(320,200)")
+					.selectAll("text")
+					.data(words)
+					.enter().append("text")
+					.style("font-size", function (d) { return d.size + "px"; })
+					.style("fill", function (d, i) { return color(i); })
+					.attr("transform", function (d) {
+						return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+					})
+					.text(function (d) { return d.text; });
+			}
 		</script>
 		
 	</body>
