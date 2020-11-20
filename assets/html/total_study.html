@@ -28,9 +28,9 @@
 
             <!-- Post -->
             <article class="box post post-excerpt">
-                
 
-                <iframe class ='project' src="./project/project_1.html" style="width:100%; height: 280em"></iframe>
+
+                <iframe class='study' src="./study/study_1.html" style="width:100%; height: 70em"></iframe>
                 <a href="#" class="top" style="font-size: 1.618em;">Top</a>
 
             </article>
@@ -42,7 +42,7 @@
                 <!--<a href="#" class="button previous">Previous Page</a>-->
                 <div class="pages">
                     <a href="" class="active one">1</a>
-                    
+
                     <a href="" class="two">2</a>
                     <span>&hellip;</span>
                     <a href="">..</a>
@@ -63,8 +63,8 @@
         <nav id="nav">
             <ul>
                 <li><a href="../../index.html">Home</a></li>
-                <li class="current"><a href="#">project & Paper</a></li>
-                <li><a href="./total_study.html">Study</a></li>
+                <li><a href="./total_project.html">project & Paper</a></li>
+                <li class="current"><a href="./assets/html/total_study.html">Study</a></li>
                 <li><a href="./story_2.html">Personal_Brranding</a></li>
                 <li><a href="http://cosm.iptime.org:8000" target="_blank">[창업동아리] IM FIT</a></li>
                 <li><a href="https://rapport0919.github.io/about/">Study_Rapport</a></li>
@@ -153,7 +153,7 @@
     </div>
 
     <!-- Scripts -->
-    <script??? src="../js/jquery.min.js"></script???>
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/browser.min.js"></script>
     <script src="../js/breakpoints.min.js"></script>
     <script src="../js/util.js"></script>
@@ -171,35 +171,35 @@
             return false;
         });
 
-        
+
     </script>
     <script>
         $('.one').click(function () {
             $(this).addClass('active');
             $('.two').removeClass("active");
-            $('.project').attr({ "src": "./project/project_1.html" });
-            $('.project').css("height", "280em");
+            $('.study').attr({ "src": "./study/study_1.html" });
+            $('.study').css("height", "280em");
             $('html, body').animate({ scrollTop: 0 }, 700);
             return false;
         });
         $('.two').click(function () {
             $(this).addClass('active');
             $('.one').removeClass("active");
-            $('.project').attr({"src": "./project/project_2.html"});
-            $('.project').css("height", "130em");
+            $('.study').attr({ "src": "./study/study_2.html" });
+            $('.study').css("height", "130em");
             $('html, body').animate({ scrollTop: 0 }, 600);
             return false;
         });
         $('.next').click(function () {
             $('.two').addClass('active');
             $('.one').removeClass("active");
-            $('.project').attr({ "src": "./project/project_2.html" });
-            $('.project').css("height", "130em");
+            $('.study').attr({ "src": "./study/study_2.html" });
+            $('.study').css("height", "130em");
             $('html, body').animate({ scrollTop: 0 }, 600);
             return false;
         });
     </script>
-    
+
 
 </body>
 

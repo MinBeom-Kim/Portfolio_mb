@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../css/main2.css" />
+    <script src="../../js/jquery.js"></script>
+    <script src="../..//js/pdfobject.js"></script>
+
+</head>
+
+<body class="is-preload" style="background-color: #FDFDFD;">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Study</h2>
+                    </header>
+                    <div class="posts">
+                        <article>
+                            <a href="#" class="image"><img src="../../../images/service_design.png" alt="" /></a>
+                            <h3>서비스 디자인</h3>
+                            
+                            <p>경험을 들어주는 이야기꾼
+                            </p>
+                            <ul class="actions">
+                                <li id="12"><a href="#" class="button">More</a></li>
+                                <!-- The Modal -->
+                                <div id="Modal_12" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="height:150em;">
+                                        <span class="close  close_12">&times;</span>
+                                        <div class="project_12" style="width:100%;height:45em;">
+                                        
+                                        <P>
+                                            <ul>
+                                                # 서비스 디자인
+                                                <li>
+                                                    * (수정) 세상을 다시 디자인하다 - 서비스디자인 소개용 발표자료. 2019.8.
+                                                    https://servicedesign.tistory.com/107
+                                                </li>
+                                                <li>
+                                                    * USABLE_네이버 카페_서비스 디자인 스터디를 위한 참고자료
+                                                    https://cafe.naver.com/usable?iframe_url=/ArticleRead.nhn%3Fclubid=10784162%26page=1%26menuid=59%26boardtype=L%26articleid=4745%26referrerAllArticles=false%20https://codeday.me/ko/qa/20190416/344009.html
+                                                </li>
+                                                <li>
+                                                    * 유엑수다
+                                                    https://www.buzzsprout.com/266562
+                                                </li>
+                                                <li>
+
+                                                    * pxd
+                                                    https://www.pxd.co.kr/
+                                                    https://story.pxd.co.kr/
+                                                    https://story.pxd.co.kr/1486
+
+                                                </li>
+
+                                            </ul>
+                                            
+                                            
+
+                                        </P>
+                                        </div>
+                                        
+
+                                    </div>
+
+                                </div>
+                            </ul>
+                        </article>
+                       
+
+                    </div>
+                </section>
+
+
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+
+        <script>
+            var ctx = document.getElementById("skills").getContext('2d');
+            var ctx2 = document.getElementById("skills2").getContext('2d');
+            var ctx3 = document.getElementById("skills3").getContext('2d');
+            var ctx4 = document.getElementById("skills4").getContext('2d');
+
+            var skillsData = {
+                labels: ["label-1", "label-2", "label-3", "label-4", "label-5"],
+                datasets: [{
+                    data: [7, 10, 6, 2, 4],
+                    backgroundColor: [
+                        '#447B66',
+                        '#96CCA8',
+                        '#C0E1D1',
+                        '#E0ECE6',
+                        '#C6D589',
+                    ]
+                }]
+            };
+
+            var options = {
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }],
+                },
+                legend: {
+                    display: false
+                }
+            };
+
+            var myChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: skillsData,
+                options: options,
+            });
+            var myChart2 = new Chart(ctx2, {
+                type: 'horizontalBar',
+                data: skillsData,
+                options: options,
+            });
+            var myChart3 = new Chart(ctx3, {
+                type: 'horizontalBar',
+                data: skillsData,
+                options: options,
+            });
+            var myChart4 = new Chart(ctx4, {
+                type: 'horizontalBar',
+                data: skillsData,
+                options: options,
+            });
+        </script>
+        <script>
+            // Get the modal
+
+            var index = 1;
+            var id_check = 0;
+
+            for (index = 1; index < 13; index++) {
+                $('#' + index).click(function () {
+
+                    id_check = $(this).attr('id');
+                    var modal = document.getElementById("Modal_" + id_check);
+                    console.log(modal)
+                    // Get the button that opens the modal
+                    modal.style.display = "block";
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close_" + id_check)[0];
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    $(document).keydown(function (event) {
+                        if (event.keyCode == 27 || event.which == 27) {
+
+                            modal.style.display = "none";
+
+                        }
+                    });
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+                });
+
+
+            }
+
+
+
+
+
+
+        </script>
+
+</body>
+
+</html>
