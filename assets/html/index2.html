@@ -91,7 +91,7 @@
 											</div>
 										</article>
 										<article>
-											<div id="skills3" class="content">
+											<div id="skills3" class="content col-xs-12 col-lg-6">
 												
 											</div>
 										</article>
@@ -494,6 +494,21 @@
 				}]
 			};
 
+			var skillsData2 = {
+					labels: ["자기경영", "글로컬", "나눔", "소통", "융합", "도전성취"],
+					datasets: [{
+						data: [2180, 379, 386, 579 * 2, 181 * 4, 1417],
+						backgroundColor: [
+							'#447B66',
+							'#E6F2EC',
+							'#E0ECE6',
+							'#96CCA8',
+							'#C0E1D1',
+							'#7DB5A0',
+						]
+					}]
+				};
+
 			var options = {
 					scales: {
 						yAxes: [{
@@ -513,7 +528,8 @@
 						}],
 					},
 					legend: {
-						display: false
+						display: false,
+						
 					}
 			};
 
@@ -524,15 +540,15 @@
 			});
 			var myChart2 = new Chart(ctx2, {
 					type: 'horizontalBar',
-					data: skillsData,
+					data: skillsData2,
 					options: options,
 				});
 		</script>
 		<script>
 
-			var frequency_list = [{ "text": "기회", "size": 85 }, { "text": "협업", "size": 70 }, { "text": "소통", "size": 55 }, { "text": "리더십", "size": 30 }, { "text": "팔로워십", "size": 25 }, { "text": "창업", "size": 60 }, { "text": "동아리", "size": 70 }, { "text": "공유", "size": 40 } ];
+			var frequency_list = [{ "text": "기회", "size": 85 }, { "text": "협업", "size": 70 }, { "text": "소통", "size": 55 }, { "text": "리더십", "size": 30 }, { "text": "팔로워십", "size": 25 }, { "text": "창업", "size": 70 }, { "text": "동아리", "size": 70 }, { "text": "공유", "size": 40 }, { "text": "수혜자", "size": 50 }, { "text": "고객", "size": 45 }, { "text": "이해관계자", "size": 60 }, { "text": "인사이트", "size": 40 } ];
 
-
+			
 			var color = d3.scaleLinear()
 				.domain([100, 20, 15, 10, 6, 5, 4, 3, 2, 1])
 				.range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#A7F2D7", "#9EE6CB", "#8DCCB5", "#7BB39E", "#6A9988", "#618C7C", "#567D6F"]);
@@ -545,7 +561,8 @@
 				.start();
 
 			function draw(words) {
-				d3.select("#skills3").append("svg")
+				d3.select("#skills3")
+					.append("svg")
 					.attr("width", 850)
 					.attr("height", 350)
 					.attr("class", "wordcloud")
