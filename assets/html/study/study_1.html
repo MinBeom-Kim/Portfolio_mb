@@ -83,20 +83,56 @@
                     </header>
                     <div class="posts">
                         <article>
+                            <a href="#" class="image"><img src="../../../images/dev.png" alt="" /></a>
+                            <h3>개발</h3>
+                            
+                            <p> Web, Mobild<br>
+                                C, Java, Python, JS<br>
+                                Ruby On Rails, Django<br>
+                                DB
+                            </p>
+                            <ul class="actions">
+                                <li id="1"><a href="#" class="button">More</a></li>
+                                <!-- The Modal -->
+                                <div id="Modal_1" class="modal">
+                            
+                                    <!-- Modal content -->
+                                    <div class="modal-content" style="height:150em;">
+                                        <span class="close  close_1">&times;</span>
+                                        <div class="study_1" style="width:100%;height:45em;">
+                            
+                                            <P>
+                                            <ul>
+                                                # 개발
+                                                
+                                            </ul>
+                            
+                            
+                            
+                                            </P>
+                                        </div>
+                            
+                            
+                                    </div>
+                            
+                                </div>
+                            </ul>
+                        </article>
+                        <article>
                             <a href="#" class="image"><img src="../../../images/service_design.png" alt="" /></a>
                             <h3>서비스 디자인</h3>
                             
                             <p>경험을 들어주는 이야기꾼
                             </p>
                             <ul class="actions">
-                                <li id="12"><a href="#" class="button">More</a></li>
+                                <li id="2"><a href="#" class="button">More</a></li>
                                 <!-- The Modal -->
-                                <div id="Modal_12" class="modal">
+                                <div id="Modal_2" class="modal">
 
                                     <!-- Modal content -->
                                     <div class="modal-content" style="height:150em;">
-                                        <span class="close  close_12">&times;</span>
-                                        <div class="project_12" style="width:100%;height:45em;">
+                                        <span class="close  close_2">&times;</span>
+                                        <div class="study_2" style="width:100%;height:45em;">
                                         
                                         <P>
                                             <ul>
@@ -107,7 +143,8 @@
                                                 </li>
                                                 <li>
                                                     * USABLE_네이버 카페_서비스 디자인 스터디를 위한 참고자료
-                                                    https://cafe.naver.com/usable?iframe_url=/ArticleRead.nhn%3Fclubid=10784162%26page=1%26menuid=59%26boardtype=L%26articleid=4745%26referrerAllArticles=false%20https://codeday.me/ko/qa/20190416/344009.html
+                                                    https://cafe.naver.com/usable?iframe_url=/ArticleRead.nhn%3Fclubid=10784162%26page=1%26menuid=59%26boardtype=L%26articleid=4745%26referrerAllArticles=false%20
+                                                    https://codeday.me/ko/qa/20190416/344009.html
                                                 </li>
                                                 <li>
                                                     * 유엑수다
@@ -144,74 +181,8 @@
 
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 
-
-        <script>
-            var ctx = document.getElementById("skills").getContext('2d');
-            var ctx2 = document.getElementById("skills2").getContext('2d');
-            var ctx3 = document.getElementById("skills3").getContext('2d');
-            var ctx4 = document.getElementById("skills4").getContext('2d');
-
-            var skillsData = {
-                labels: ["label-1", "label-2", "label-3", "label-4", "label-5"],
-                datasets: [{
-                    data: [7, 10, 6, 2, 4],
-                    backgroundColor: [
-                        '#447B66',
-                        '#96CCA8',
-                        '#C0E1D1',
-                        '#E0ECE6',
-                        '#C6D589',
-                    ]
-                }]
-            };
-
-            var options = {
-                scales: {
-                    yAxes: [{
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            display: false
-                        },
-                        gridLines: {
-                            display: false,
-                            drawBorder: false
-                        }
-                    }],
-                },
-                legend: {
-                    display: false
-                }
-            };
-
-            var myChart = new Chart(ctx, {
-                type: 'horizontalBar',
-                data: skillsData,
-                options: options,
-            });
-            var myChart2 = new Chart(ctx2, {
-                type: 'horizontalBar',
-                data: skillsData,
-                options: options,
-            });
-            var myChart3 = new Chart(ctx3, {
-                type: 'horizontalBar',
-                data: skillsData,
-                options: options,
-            });
-            var myChart4 = new Chart(ctx4, {
-                type: 'horizontalBar',
-                data: skillsData,
-                options: options,
-            });
-        </script>
         <script>
             // Get the modal
 
