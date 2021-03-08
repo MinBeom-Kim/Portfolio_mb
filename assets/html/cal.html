@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<style>
+    a.top {
+        position: fixed;
+        left: 80%;
+        bottom: 50px;
+        display: none;
+    }
+</style>
+
+<html>
+
+<head>
+    <title>PORTFOLIO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/main.css" />
+    
+    <script src="../js/jquery.js"></script>
+</head>
+
+
+<body class="is-preload">
+
+    <!-- Content -->
+    <div id="content">
+        <div class="inner">
+
+            <!-- Post -->
+            <article class="box post post-excerpt">
+
+
+                <iframe class='study' src="./cal/cal_1.html" style="width:100%; height: 70em"></iframe>
+                <a href="#" class="top" style="font-size: 1.618em;">Top</a>
+
+            </article>
+
+            <a href="#" class="top" style="font-size: 1.618em;">Top</a>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <!--<a href="#" class="button previous">Previous Page</a>-->
+                <div class="pages">
+                    <a href="" class="active one">1</a>
+
+                    <a href="" class="two">2</a>
+                    <span>&hellip;</span>
+                    <a href="">..</a>
+                </div>
+                <a href="" class="button next">Next Page</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+
+        <!-- Logo -->
+        <h1 id="logo"><a href="http://www.onestoria.com/"></a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="./total_project.html">project & Paper</a></li>
+                <li class="current"><a href="./assets/html/total_study.html">Study</a></li>
+                <li><a href="./story_2.html">Personal_Brranding</a></li>
+                <li><a href="http://cosm.iptime.org:8000" target="_blank">[창업동아리] IM FIT</a></li>
+                <li><a href="https://rapport0919.github.io/about/">Study_Rapport</a></li>
+                <li><a href="./other.html">Other</a></li>
+            </ul>
+        </nav>
+
+        <!-- Search -->
+        <section class="box search">
+            <form method="post" action="#">
+                <input type="text" class="text" name="search" placeholder="Search" />
+            </form>
+        </section>
+
+        <!-- Calendar -->
+        <section class="box calendar">
+            <div class="inner">
+                <table>
+                    <caption>May 2020</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" title="Monday">M</th>
+                            <th scope="col" title="Tuesday">T</th>
+                            <th scope="col" title="Wednesday">W</th>
+                            <th scope="col" title="Thursday">T</th>
+                            <th scope="col" title="Friday">F</th>
+                            <th scope="col" title="Saturday">S</th>
+                            <th scope="col" title="Sunday">S</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="pad"><span>&nbsp;</span></td>
+                            <td><span>1</span></td>
+                            <td><span>2</span></td>
+                            <td><span>3</span></td>
+                        </tr>
+                        <tr>
+                            <td class="today"><a href="#"><span>4</span></td>
+                            <td><span>5</span></td>
+                            <td>6</a></td>
+                            <td><span>7</span></td>
+                            <td><span>8</span></td>
+                            <td><span>9</span></td>
+                            <td>10</a></td>
+                        </tr>
+                        <tr>
+                            <td><span>11</span></td>
+                            <td><span>12</span></td>
+                            <td><span>13</span></td>
+                            <td>14</a></td>
+                            <td><span>15</span></td>
+                            <td><span>16</span></td>
+                            <td><span>17</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>18</span></td>
+                            <td><span>19</span></td>
+                            <td><span>20</span></td>
+                            <td><span>21</span></td>
+                            <td><span>22</span></td>
+                            <td>23</a></td>
+                            <td><span>24</span></td>
+                        </tr>
+                        <tr>
+                            <td>25</a></td>
+                            <td><span>26</span></td>
+                            <td><span>27</span></td>
+                            <td><span>28</span></td>
+                            <td><span>29</span></td>
+                            <td><span>30</span></td>
+                            <td><span>31</span></td>
+                            <td class="pad" colspan="3"><span>&nbsp;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <ul id="copyright">
+            <li>&copy; Untitled.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+    <script src="../js/breakpoints.min.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });
+        $('.top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+
+
+    </script>
+    <script>
+        $('.one').click(function () {
+            $(this).addClass('active');
+            $('.two').removeClass("active");
+            $('.study').attr({ "src": "./study/study_1.html" });
+            $('.study').css("height", "280em");
+            $('html, body').animate({ scrollTop: 0 }, 700);
+            return false;
+        });
+        $('.two').click(function () {
+            $(this).addClass('active');
+            $('.one').removeClass("active");
+            $('.study').attr({ "src": "./study/study_2.html" });
+            $('.study').css("height", "130em");
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+        $('.next').click(function () {
+            $('.two').addClass('active');
+            $('.one').removeClass("active");
+            $('.study').attr({ "src": "./study/study_2.html" });
+            $('.study').css("height", "130em");
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+    </script>
+
+
+</body>
+
+</html>
